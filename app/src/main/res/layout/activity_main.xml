@@ -53,7 +53,7 @@
             android:layout_height="57dp"
             android:layout_marginStart="50dp"
             android:backgroundTint="@color/black"
-            android:text="Inicio Session" />
+            android:text="Inicio Sesión" />
 
         <Button
             android:id="@+id/bt_registro"
