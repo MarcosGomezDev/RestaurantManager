@@ -12,10 +12,13 @@ public class Datos {
             this.nombre = nombre;
             this.email = email;
             this.telefono = telefono;
+
         }
 
-    public Datos(Editable text, Editable text1, Editable text2) {
+    public Datos() {
     }
+
+
 
     public String getNombre() {
         return nombre;
