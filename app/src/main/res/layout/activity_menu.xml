@@ -5,7 +5,6 @@
     android:id="@+id/bt_cerrar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
     tools:context=".Menu">
 
     <LinearLayout
@@ -27,28 +26,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
-            android:text="Reservas" />
+            android:text="Reservas"
+            app:cornerRadius="40dip" />
 
         <Button
             android:id="@+id/bt_fichaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
-            android:text="Fichar" />
+            android:text="Fichar"
+            app:cornerRadius="40dip" />
 
         <Button
             android:id="@+id/bt_caja"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
-            android:text="Caja" />
+            android:text="Caja"
+            app:cornerRadius="40dip" />
 
         <Button
             android:id="@+id/bt_consultas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
-            android:text="Consultas" />
+            android:text="Consultas"
+            app:cornerRadius="40dip" />
     </LinearLayout>
 
     <Button
@@ -60,7 +63,8 @@
         android:layout_marginEnd="167dp"
         android:layout_marginBottom="141dp"
         android:backgroundTint="@color/black"
-        android:text="Cerrar"
+        android:text="Cerrar sesión"
+        app:cornerRadius="40dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,14 +72,13 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="284dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="79dp"
+        android:layout_width="411dp"
+        android:layout_height="27dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="48dp"
         android:layout_marginBottom="73dp"
-        android:text="Menu princpial"
+        android:text="Menú Principial"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
