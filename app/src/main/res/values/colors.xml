@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="AppColorPrincipal">#2196f3</color>
-    <color name="AppColorSecundario">#f1f5f7</color>
+    <color name="AppColorSecundario">#f8f8f8</color>
     <color name="AppColorRed">#f93324</color>
     <color name="AppColorGreen">#54c242</color>
     <color name="AppColorGrey">#36393b</color>
