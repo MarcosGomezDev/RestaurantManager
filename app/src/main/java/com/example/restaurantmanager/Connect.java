@@ -46,7 +46,7 @@ public class Connect extends AppCompatActivity implements View.OnClickListener {
         bt_1.setOnClickListener(this);
         bt_2.setOnClickListener(this);
 
-      FirebaseDatabase database = FirebaseDatabase.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference reference1 = database.getReference(PATH_START).child(PATH_MESSAGE );
 
         reference1.addValueEventListener(new ValueEventListener() {
