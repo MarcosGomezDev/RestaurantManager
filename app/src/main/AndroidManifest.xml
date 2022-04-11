@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".Reservas"
-            android:exported="false" />
-        <activity
             android:name=".Fichar"
             android:exported="false" />
         <activity
