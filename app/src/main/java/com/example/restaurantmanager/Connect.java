@@ -18,7 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -34,7 +36,7 @@ public class Connect extends AppCompatActivity implements View.OnClickListener {
     private static final String PATH_dato = "datos";
 
     List<Datos> listadatos = new ArrayList<>();
-
+    String date="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,9 @@ public class Connect extends AppCompatActivity implements View.OnClickListener {
         ed_nombre = findViewById(R.id.ed_nombre);
         ed_telelefono = findViewById(R.id.ed_telefono);
         ed_email = findViewById(R.id.ed_email);
+        ed_fecha = findViewById(R.id.ed_fecha);
+        date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        tv_conexion.setText("No hay conexion "+date);
 
         bt_1 = findViewById(R.id.bt_1);
         bt_2=findViewById(R.id.bt_2);
@@ -57,7 +62,7 @@ public class Connect extends AppCompatActivity implements View.OnClickListener {
         reference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                tv_conexion.setText(snapshot.getValue(String.class));
+                tv_conexion.setText(snapshot.getValue(String.class)+" "+date);
             }
 
             @Override
@@ -71,13 +76,17 @@ public class Connect extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Datos dato = new Datos(ed_nombre.getText().toString().trim(),ed_email.getText().toString().trim(),ed_telelefono.getText().toString().trim());
+        Datos dato = new Datos(ed_nombre.getText().toString().trim(),ed_email.getText().toString().trim(),ed_telelefono.getText().toString().trim(),ed_fecha.getText().toString().trim());
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference reference = database.getReference(PATH_dato);
 
         switch (view.getId()){
             case R.id.bt_1:
                 reference.push().setValue(dato);
+                ed_nombre.setText("");
+                ed_email.setText("");
+                ed_telelefono.setText("");
+                ed_fecha.setText("");
                 break;
             case R.id.bt_2:
                 reference.addChildEventListener(new ChildEventListener() {
@@ -87,7 +96,7 @@ public class Connect extends AppCompatActivity implements View.OnClickListener {
 
                        if (dato2.getEmail().compareTo("20/07/87")==0){
                             Cadena = dato2.getNombre()+"\n"+Cadena;
-                            tv_conexion.setText(Cadena);
+                            tv_conexion.setText(Cadena );
                         }
 
 

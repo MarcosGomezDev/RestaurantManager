@@ -7,17 +7,27 @@ public class Datos {
         private String nombre;
         private String email;
         private String telefono;
+        private String fecha;
 
-        public Datos(String nombre, String email, String telefono) {
+        public Datos(String nombre, String email, String telefono, String fecha) {
             this.nombre = nombre;
             this.email = email;
             this.telefono = telefono;
+            this.fecha = fecha;
         }
 
         public Datos() {
         }
 
-        public String getNombre() {
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getNombre() {
             return nombre;
         }
 

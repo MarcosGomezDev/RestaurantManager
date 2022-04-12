@@ -83,7 +83,7 @@
             tools:layout_conversion_absoluteWidth="143dp" />
 
         <Button
-            android:id="@+id/SignInButton"
+            android:id="@+id/signInButton"
             android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/AppColorPrincipal"

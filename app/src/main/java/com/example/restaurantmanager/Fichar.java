@@ -84,6 +84,9 @@ public class Fichar extends AppCompatActivity implements View.OnClickListener {
                 bt_horafin.setEnabled(false);
                 bt_hora.setEnabled(true);
                 break;
+            case R.id.bt_fichar:
+
+                break;
         }
     }
 }
