@@ -18,6 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Connect extends AppCompatActivity implements View.OnClickListener {
 
@@ -29,6 +32,8 @@ public class Connect extends AppCompatActivity implements View.OnClickListener {
     private static final String PATH_MESSAGE = "mensaje";
 
     private static final String PATH_dato = "datos";
+
+    List<Datos> listadatos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,28 +65,32 @@ public class Connect extends AppCompatActivity implements View.OnClickListener {
                     Toast.makeText(Connect.this,"error al consultar",Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 
     @Override
     public void onClick(View view) {
-        Datos newData = new Datos(ed_nombre.getText().toString().trim(),ed_email.getText().toString().trim(),ed_telelefono.getText().toString().trim());
+        Datos dato = new Datos(ed_nombre.getText().toString().trim(),ed_email.getText().toString().trim(),ed_telelefono.getText().toString().trim());
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference reference = database.getReference(PATH_dato);
 
         switch (view.getId()){
             case R.id.bt_1:
-                reference.push().setValue(newData);
+                reference.push().setValue(dato);
                 break;
             case R.id.bt_2:
                 reference.addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                        Datos recoverData = snapshot.getValue(Datos.class);
+                        Datos dato2 = snapshot.getValue(Datos.class);
 
-                        if ( recoverData.getEmail().compareTo("20/07/87") ==0 ){
-                            Cadena = recoverData.getNombre()+"\n"+Cadena;
+                       if (dato2.getEmail().compareTo("20/07/87")==0){
+                            Cadena = dato2.getNombre()+"\n"+Cadena;
                             tv_conexion.setText(Cadena);
                         }
+
+
                     }
 
                     @Override
