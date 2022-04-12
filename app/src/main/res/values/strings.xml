@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">RestaurantManager</string>
-    <string name="title_activity_reserva_detail_host">ReservaDetailHostActivity</string>
-    <string name="title_reserva_list">Reservas</string>
-    <string name="title_reserva_detail">Reserva Detail</string>
 </resources>

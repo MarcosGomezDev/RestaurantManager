@@ -8,107 +8,127 @@
     android:backgroundTint="@color/AppColorSecundario"
     tools:context=".MainActivity">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/signInToolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/AppColorPrincipal"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:elevation="4dp"
+        android:theme="@style/LoginBar"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:navigationIcon="@drawable/ic_menu_navigation_white"
+
+    />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="396dp"
-        android:layout_height="352dp"
+        android:layout_width="322dp"
+        android:layout_height="811dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInToolbar">
+        app:layout_constraintTop_toBottomOf="@+id/signInToolbar"
+        tools:layout_conversion_absoluteHeight="351dp"
+        tools:layout_conversion_absoluteWidth="392dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="117dp"
-            android:layout_height="140dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="128dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="70dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="140dp"
+            tools:layout_conversion_absoluteWidth="117dp"
+            android:contentDescription="TODO" />
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
-            android:layout_width="352dp"
+            android:layout_width="295dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:ems="10"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/checkBox"
+            android:textColorHint="#607D8B"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.36"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="352dp"
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
-            android:layout_width="352dp"
+            android:layout_width="295dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="Contraseña"
             android:inputType="textPassword"
             android:minHeight="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.36"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="352dp" />
 
         <CheckBox
             android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:minHeight="48dp"
             android:text="Recordad usuario"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="394dp"
-        android:layout_height="160dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+            tools:layout_conversion_absoluteHeight="48dp"
+            tools:layout_conversion_absoluteWidth="143dp" />
 
         <Button
             android:id="@+id/bt_inicio"
-            android:layout_width="352dp"
-            android:layout_height="53dp"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/AppColorPrincipal"
             android:insetLeft="20dp"
             android:insetRight="20dp"
             android:text="Iniciar sesión"
+            android:textColor="@color/white"
             app:cornerRadius="40dip"
-            app:layout_constraintBottom_toTopOf="@+id/bt_registro"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_registro"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_conversion_absoluteHeight="53dp"
+            tools:layout_conversion_absoluteWidth="352dp" />
 
         <Button
             android:id="@+id/bt_registro"
-            android:layout_width="352dp"
-            android:layout_height="53dp"
-            android:layout_marginBottom="32dp"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/AppColorPrincipal"
             android:insetLeft="20dp"
             android:insetRight="20dp"
             android:text="Registrar"
+            android:textColor="#FBF9F9"
             app:cornerRadius="40dip"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox"
+            tools:layout_conversion_absoluteHeight="53dp"
+            tools:layout_conversion_absoluteWidth="352dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

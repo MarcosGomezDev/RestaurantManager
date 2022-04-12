@@ -60,8 +60,6 @@ public class Connect extends AppCompatActivity implements View.OnClickListener {
                     Toast.makeText(Connect.this,"error al consultar",Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 
     @Override
