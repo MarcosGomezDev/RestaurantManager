@@ -32,13 +32,17 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
             case R.id.bt_alta:
 
-                if (!ch_condiciones.isChecked()&&!ch_Empleado.isChecked()&&!ch_Administrador.isChecked()){
+                if (!ch_condiciones.isChecked()&&!ch_Empleado.isChecked()
+                        && !ch_Administrador.isChecked()) {
                     Toast.makeText(this,
-                            "Hay que aceptar las condiciones de uso ", Toast.LENGTH_SHORT).show();
+                            "Hay que aceptar las condiciones de uso ",
+                            Toast.LENGTH_SHORT).show();
                 }
+
                 if (ch_Empleado.isChecked()&&ch_Administrador.isChecked()){
                     Toast.makeText(this,
-                            "Solo puedes seleccionar empleado o administrador", Toast.LENGTH_SHORT).show();
+                            "Solo puedes seleccionar empleado o administrador",
+                            Toast.LENGTH_SHORT).show();
                 }
                 else{
                     //guardamos en base de datos usuario y contraseña
