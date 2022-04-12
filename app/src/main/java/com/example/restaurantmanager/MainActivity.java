@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bt_incio= findViewById(R.id.bt_inicio);
-        bt_registro=findViewById(R.id.bt_registro);
+        bt_incio= findViewById(R.id.SignInButton);
+        bt_registro=findViewById(R.id.registerButton);
 
         bt_incio.setOnClickListener(this);
         bt_registro.setOnClickListener(this);
@@ -29,18 +29,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(toolbar);
         //toolbar.addMenuProvider(menuAppBar);
 
-
-
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case(R.id.bt_registro):
+            case(R.id.registerButton):
                 Intent registro = new Intent(this,Registro.class);
                 startActivity(registro);
                 break;
-            case (R.id.bt_inicio):
+            case (R.id.SignInButton):
                 Intent inicio = new Intent(this,Menu.class);
                 startActivity(inicio);
                 break;

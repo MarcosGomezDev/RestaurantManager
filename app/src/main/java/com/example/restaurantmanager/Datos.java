@@ -12,35 +12,32 @@ public class Datos {
             this.nombre = nombre;
             this.email = email;
             this.telefono = telefono;
-
         }
 
-    public Datos() {
-    }
+        public Datos() {
+        }
 
+        public String getNombre() {
+            return nombre;
+        }
 
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
 
-    public String getNombre() {
-        return nombre;
-    }
+        public String getEmail() {
+            return email;
+        }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+        public void setEmail(String email) {
+            this.email = email;
+        }
 
-    public String getEmail() {
-        return email;
-    }
+        public String getTelefono() {
+            return telefono;
+        }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
+        public void setTelefono(String telefono) {
+            this.telefono = telefono;
+        }
 }

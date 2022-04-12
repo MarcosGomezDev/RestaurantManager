@@ -64,25 +64,24 @@ public class Connect extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Datos dato = new Datos(ed_nombre.getText().toString().trim(),ed_email.getText().toString().trim(),ed_telelefono.getText().toString().trim());
+        Datos newData = new Datos(ed_nombre.getText().toString().trim(),ed_email.getText().toString().trim(),ed_telelefono.getText().toString().trim());
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference reference = database.getReference(PATH_dato);
 
         switch (view.getId()){
             case R.id.bt_1:
-                reference.push().setValue(dato);
+                reference.push().setValue(newData);
                 break;
             case R.id.bt_2:
                 reference.addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                        Datos dato2 = snapshot.getValue(Datos.class);
+                        Datos recoverData = snapshot.getValue(Datos.class);
 
-                        if (dato2.getEmail().compareTo("20/07/87")==0){
-                            Cadena = dato2.getNombre()+"\n"+Cadena;
+                        if ( recoverData.getEmail().compareTo("20/07/87") ==0 ){
+                            Cadena = recoverData.getNombre()+"\n"+Cadena;
                             tv_conexion.setText(Cadena);
                         }
-
                     }
 
                     @Override
