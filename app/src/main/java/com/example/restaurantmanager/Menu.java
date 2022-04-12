@@ -48,8 +48,8 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
                 startActivity(fichar);
                 break;
             case R.id.bt_reserva:
-                //Intent reserva = new Intent(this,Reservas.class);
-                //startActivity(reserva);
+                Intent reserva = new Intent(this,Reservas.class);
+                startActivity(reserva);
                 break;
             case R.id.bt_close:
                 break;

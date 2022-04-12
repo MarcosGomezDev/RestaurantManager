@@ -8,21 +8,7 @@
     android:backgroundTint="@color/AppColorSecundario"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/signInToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/AppColorPrincipal"
-        android:elevation="4dp"
-        app:title="@string/app_name"
-        app:titleTextColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:navigationIcon="@drawable/ic_menu_navigation_white"
 
-    />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -97,7 +83,7 @@
             tools:layout_conversion_absoluteWidth="143dp" />
 
         <Button
-            android:id="@+id/signInButton"
+            android:id="@+id/SignInButton"
             android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/AppColorPrincipal"
